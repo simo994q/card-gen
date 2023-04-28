@@ -17,7 +17,18 @@ const boxShadowSelector = document.getElementById('boxShadowSelector')
 
 let cardBoxShadow;
 
-boxShadowSelector
+const boxShadowDetails = document.getElementById('boxShadowDetails')
+
+boxShadowSelector.addEventListener('change', () => {
+    if (boxShadowSelector.checked == true) {
+        boxShadowDetails.style.display = "flex"
+        boxShadow()
+    }
+    else {
+        boxShadowDetails.style.display = "none"
+        card.style.boxShadow = "0px 0px 0px 0px"
+    }
+})
 
 function boxShadow() {
 
